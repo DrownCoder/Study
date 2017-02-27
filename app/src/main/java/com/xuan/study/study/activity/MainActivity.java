@@ -61,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
         Button sendlocal = (Button) findViewById(R.id.bt_id_sendlocal);
         sendlocal.setOnClickListener(onClickListener);
         /**
+         * ContentProvider
+         */
+        Button contentprovider = (Button) findViewById(R.id.bt_id_contentprovider);
+        contentprovider.setOnClickListener(onClickListener);
+
+        /**
          * 注册广播接收器
          */
         IntentFilter filterHight = new IntentFilter();
@@ -100,6 +106,11 @@ public class MainActivity extends AppCompatActivity {
                     broadcastIntent.setAction(BROADCAST_ACTION);
                     LocalBroadcastManager.getInstance(MainActivity.this)
                             .sendBroadcast(broadcastIntent);
+                    break;
+                case R.id.bt_id_contentprovider:
+                    Intent providerIntent = new Intent(MainActivity.this,ProviderActivity.class);
+                    startActivity(providerIntent);
+                    break;
             }
         }
     };
