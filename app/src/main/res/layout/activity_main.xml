@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
 
     <Button
         android:id="@+id/bt_id_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dialog" />
-</RelativeLayout>
+    <Button
+        android:id="@+id/bt_id_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送有序广播"
+        />
+    <Button
+        android:id="@+id/bt_id_sendlocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送本地广播"
+        />
+</LinearLayout>
