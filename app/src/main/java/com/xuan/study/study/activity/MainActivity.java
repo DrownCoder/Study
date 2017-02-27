@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xuan.study.study.R;
+import com.xuan.study.study.service.WeatherService;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -19,10 +20,17 @@ public class MainActivity extends AppCompatActivity {
         dialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,DialogActivity.class);
+                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                //Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:13888888888"));
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        Log.i("Activity","onNewIntent");
+        super.onNewIntent(intent);
     }
 
     @Override
