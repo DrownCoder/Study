@@ -31,4 +31,10 @@
         android:layout_height="wrap_content"
         android:text="ContentProvider"
         />
+    <Button
+        android:id="@+id/bt_id_customview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义Scroll"
+        />
 </LinearLayout>

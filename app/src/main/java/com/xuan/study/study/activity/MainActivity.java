@@ -82,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
          */
         LocalBroadcastManager.getInstance(this).registerReceiver(oneBroadcastReciver,filterLow);
         LocalBroadcastManager.getInstance(this).registerReceiver(twoBroadcastReciver,filterHight);
+
+        /**
+         * 自定义Scroll Activity
+         */
+        Button scroll = (Button) findViewById(R.id.bt_id_customview);
+        scroll.setOnClickListener(onClickListener);
+
     }
 
     private View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -110,6 +117,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.bt_id_contentprovider:
                     Intent providerIntent = new Intent(MainActivity.this,ProviderActivity.class);
                     startActivity(providerIntent);
+                    break;
+                case R.id.bt_id_customview:
+                    Intent scrollIntent = new Intent(MainActivity.this,ScrollActivity.class);
+                    startActivity(scrollIntent);
                     break;
             }
         }

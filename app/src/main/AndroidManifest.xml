@@ -29,7 +29,8 @@
             android:name=".contentprovider.UserInfoProvider"
             android:authorities="com.book.jtm.info" />
 
-        <activity android:name=".activity.ProviderActivity"></activity>
+        <activity android:name=".activity.ProviderActivity" />
+        <activity android:name=".activity.ScrollActivity"></activity>
     </application>
 
 </manifest>
