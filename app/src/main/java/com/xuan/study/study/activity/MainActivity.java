@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         /**
          * 弹一个DialogAcitivity
          */
@@ -94,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
          */
         Button scroll = (Button) findViewById(R.id.bt_id_customview);
         scroll.setOnClickListener(onClickListener);
+        /**
+         * Handler
+         */
+        Button handlerBtn = (Button) findViewById(R.id.bt_id_handler);
+        handlerBtn.setOnClickListener(onClickListener);
 
     }
 
@@ -134,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent scrollIntent = new Intent(MainActivity.this,ScrollActivity.class);
                     startActivity(scrollIntent);
                     break;
+                case R.id.bt_id_handler:
+                    Intent handlerIntent = new Intent(MainActivity.this,HandlerActivity.class);
+                    startActivity(handlerIntent);
             }
         }
     };

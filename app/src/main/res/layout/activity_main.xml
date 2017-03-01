@@ -44,4 +44,10 @@
         android:layout_height="wrap_content"
         android:text="自定义Scroll"
         />
+    <Button
+        android:id="@+id/bt_id_handler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="handler学习"
+        />
 </LinearLayout>
