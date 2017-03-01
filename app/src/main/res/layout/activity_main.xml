@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:text="Dialog" />
     <Button
-        android:id="@+id/bt_id_send"
+        android:id="@+id/bt_id_singletop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="发送有序广播"
+        android:text="SingleTop"
         />
     <Button
         android:id="@+id/bt_id_sendlocal"
@@ -25,6 +25,13 @@
         android:layout_height="wrap_content"
         android:text="发送本地广播"
         />
+    <Button
+        android:id="@+id/bt_id_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送有序广播"
+        />
+
     <Button
         android:id="@+id/bt_id_contentprovider"
         android:layout_width="wrap_content"

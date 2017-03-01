@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.xuan.study.study.MDialogFragment;
 import com.xuan.study.study.R;
 import com.xuan.study.study.service.WeatherService;
 
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
          */
         Button dialog = (Button) findViewById(R.id.bt_id_dialog);
         dialog.setOnClickListener(onClickListener);
+        /**
+         * SingleTop
+         */
+        Button sinleBtn = (Button) findViewById(R.id.bt_id_singletop);
+        sinleBtn.setOnClickListener(onClickListener);
         /**
          * 发送一条广播
          */
@@ -95,9 +101,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             switch (v.getId()){
-                case R.id.activity_dialog:
-                    Intent dialogIntent = new Intent(MainActivity.this,DialogActivity.class);
-                    startActivity(dialogIntent);
+                case R.id.bt_id_dialog:
+                    /*Intent dialogIntent = new Intent(MainActivity.this,DialogActivity.class);
+                    startActivity(dialogIntent);*/
+                    MDialogFragment mDialogFragment = new MDialogFragment();
+                    mDialogFragment.show(getFragmentManager(),"Dialog");
+                    break;
+                case R.id.bt_id_singletop:
+                    Intent singleIntent = new Intent(MainActivity.this,MainActivity.class);
+                    startActivity(singleIntent);
                     break;
                 case R.id.bt_id_send:
                     //发送普通广播
@@ -161,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Activity","onDestroy");
         unregisterReceiver(oneBroadcastReciver);
         unregisterReceiver(twoBroadcastReciver);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(oneBroadcastReciver);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(oneBroadcastReciver);
         super.onDestroy();
     }
 
